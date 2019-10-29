@@ -1,0 +1,245 @@
+/* CSS for ITSC 3155 Project */
+
+/* styling for Title Text on desktop */
+@media screen and (min-width: 1051px) {
+    .titleText {
+        color: #006600;
+        font-family: "Source Sans Pro", helvetica, arial, sans-serif;
+        font-size: 42px;
+        margin-left: -30px;
+        margin-bottom: -10px;
+    }
+}
+
+/* styling title text smaller devices */
+@media screen and (max-width: 1050px) {
+    .titleText {
+        color: #006600;
+        font-family: "Source Sans Pro", helvetica, arial, sans-serif;
+        font-size: 42px;
+        margin-bottom: -10px;
+    }
+}
+
+/* styling for intro paragraph */
+#intro {
+    font-size: 24px;
+    color: #5a5d60;
+    margin-bottom: 5px;
+}
+
+/* styling for subheadings on desktop */
+@media screen and (min-width: 1051px) {
+    .subheading {
+        color: #006600;
+        font-family: "Source Sans Pro", helvetica, arial, sans-serif;
+        font-size: 30px;
+        margin-left: -30px;
+    }
+}
+
+/* styling for subheadings on smaller devices */
+@media screen and (max-width: 1050px) {
+    .subheading {
+        color: #006600;
+        font-family: "Source Sans Pro", helvetica, arial, sans-serif;
+        font-size: 30px;
+    }
+
+}
+
+/* styling for description paragraphs */
+.description {
+    font-size: 18px;
+    color: #0D0D0D;
+    line-height: 1.5em;
+}
+
+/* styling to center the content of the page */
+@media screen and (min-width: 1051px) {
+    .content {
+        max-width: 960px;
+        margin: auto;
+    }
+}
+
+/* styling content for smaller devices */
+@media screen and (max-width: 1050px) {
+    .content {
+        margin: 10px;
+    }
+}
+
+/* styling for the body */
+body {
+    font-size: 16px;
+    font-family: "Source Sans Pro", helvetica, arial, sans-serif;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+/* styling for the footer of the page */
+footer {
+    text-align: center;
+    font-size: 11px;
+    font-family: "Source Sans Pro", helvetica, arial, sans-serif;
+    width: 100%;
+    position: relative;
+    margin-top: 113px;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    overflow: hidden;
+}
+
+/* styling for the input boxes */
+.inputField {
+    width: 250px;
+    font-size: 16px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    padding-left: 3px;
+}
+
+/* styling for the school name input box */
+.schoolNameField {
+    width: 320px;
+    font-size: 16px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    padding-left: 3px;
+}
+
+/* styling for submit button */
+.submitButton {
+    background-color: #006600;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    width: 80px;
+    -webkit-appearance: none;
+}
+
+/* styling for submit button on hover */
+.submitButton:hover {
+    background-color: mediumseagreen;
+}
+
+/* styling for submit button */
+.otherButton {
+    text-decoration: none;
+    background-color: #006600;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    width: 80px;
+    -webkit-appearance: none;
+}
+
+/* styling for other button on hover */
+.otherButton:hover {
+    background-color: mediumseagreen;
+}
+
+/* styling for input field titles  */
+.fieldTitle {
+    font-size: 18px;
+    color: #0D0D0D;
+    margin-bottom: 4px;
+}
+
+#studyingPicture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 12px;
+    padding-top: 10px;
+    width: 50%;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+/* styling for forms on homepage and login page */
+.formDiv {
+    float: left;
+    margin-right: 75px;
+}
+
+/* classes with clear should be under other divs */
+.clear {
+    clear: both;
+    padding-top: 50px;
+}
+
+.calcDiv {
+    text-align: center;
+}
+
+#assignments {
+    display: inline-block;
+    width: 200px;
+}
+
+#assignments input {
+    width: 150px;
+    font-size: 16px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    padding-left: 3px;
+    margin-top: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grades {
+    display: inline-block;
+    width: 200px;
+}
+
+#grades input {
+    width: 55px;
+    font-size: 16px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    padding-left: 3px;
+    margin-top: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#weights {
+    display: inline-block;
+    width: 200px;
+}
+
+#weights input {
+    width: 55px;
+    font-size: 16px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    padding-left: 3px;
+    margin-top: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.columnTitle {
+    color: #006600;
+    font-size: 20px;
+}
+
+#buttonDiv {
+    margin-top: 13px;
+    text-align: center;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- HTML file for Homepage of ITIS 3135 Project -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Class Grade Calculator</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico"/>
+</head>
+
+<body>
+<header>
+
+</header>
+
+<main>
+    <div class="content">
+        <h1 class="titleText">Class Grade Calculator</h1>
+        <p id="intro">
+            Enter your current grades for the different types of assignments, along with the weights that each of
+            assignments have. Your calculated final grade will be displayed below.
+        </p>
+        <form class="studentInfo" name="studentInfo" action="#">
+            <div class="calcDiv">
+                <div id="assignments">
+                    <p class="columnTitle">Assignment</p>
+                    <input type="text" name="assignment1" required>
+                    <input type="text" name="assignment2">
+                    <input type="text" name="assignment3">
+                    <input type="text" name="assignment4">
+                    <input type="text" name="assignment5">
+                    <input type="text" name="assignment6">
+                    <input type="text" name="assignment7">
+                    <input type="text" name="assignment8">
+                    <input type="text" name="assignment9">
+                    <input type="text" name="assignment10">
+                </div>
+                <div id="grades">
+                    <p class="columnTitle">Grade (%)</p>
+                    <input type="number" name="grade1" step="any" required>
+                    <input type="number" name="grade2" step="any">
+                    <input type="number" name="grade3" step="any">
+                    <input type="number" name="grade4" step="any">
+                    <input type="number" name="grade5" step="any">
+                    <input type="number" name="grade6" step="any">
+                    <input type="number" name="grade7" step="any">
+                    <input type="number" name="grade8" step="any">
+                    <input type="number" name="grade9" step="any">
+                    <input type="number" name="grade10" step="any">
+
+                </div>
+                <div id="weights">
+                    <p class="columnTitle">Weight (%)</p>
+                    <input type="number" name="weight1" step="any" required>
+                    <input type="number" name="weight2" step="any">
+                    <input type="number" name="weight3" step="any">
+                    <input type="number" name="weight4" step="any">
+                    <input type="number" name="weight5" step="any">
+                    <input type="number" name="weight6" step="any">
+                    <input type="number" name="weight7" step="any">
+                    <input type="number" name="weight8" step="any">
+                    <input type="number" name="weight9" step="any">
+                    <input type="number" name="weight10" step="any">
+                </div>
+            </div>
+            <div id="buttonDiv">
+                <input class="submitButton" type="submit" value="Calculate">
+                &nbsp;or&nbsp;
+                <input class="submitButton" type="reset" value="Clear">
+            </div>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>
