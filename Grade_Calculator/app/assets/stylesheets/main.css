@@ -178,11 +178,14 @@ footer {
 
 .calcDiv {
     text-align: center;
+    width: 65%;
+    float: left;
+    margin-top: -10px;
 }
 
 #assignments {
     display: inline-block;
-    width: 200px;
+    width: 150px;
 }
 
 #assignments input {
@@ -200,7 +203,7 @@ footer {
 
 #grades {
     display: inline-block;
-    width: 200px;
+    width: 150px;
 }
 
 #grades input {
@@ -218,7 +221,7 @@ footer {
 
 #weights {
     display: inline-block;
-    width: 200px;
+    width: 150px;
 }
 
 #weights input {
@@ -242,4 +245,23 @@ footer {
 #buttonDiv {
     margin-top: 13px;
     text-align: center;
+    width: 65%;
+    float: left;
+}
+
+#resultsDiv {
+    text-align: center;
+}
+
+#resultsTitle {
+    color: #006600;
+    font-size: 30px;
+}
+
+#gradeResult {
+    font-size: 20px;
+}
+
+#gradeResult strong{
+    color: #006600;
 }
