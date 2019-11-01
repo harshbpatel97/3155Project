@@ -34,17 +34,19 @@
             Please sign-up to use the calculator. If you already have an account, click the login page button.
         </p>
         <div class="formDiv">
-            <form id="studentInfo" name="studentInfo">
+            <form id="studentInfo" name="studentInfo" action="javascript: passwordCheck();">
                 <p class="fieldTitle">Student Name:</p>
-                <input class="inputField" required %= form.text_field :studentName %>
+                <input class="inputField" type="text" %= form.text_field :studentName %>
                 <p class="fieldTitle">Email:</p>
-                <input class="inputField" required %= form.text_field :email %>
+                <input class="inputField" type="email" %= form.text_field :email %>
                 <p class="fieldTitle">Password:</p>
-                <input class="inputField" required %= form.password_field :password %>
+                <input class="inputField" type="password" %= form.password_field :password %>
+                <p class="fieldTitle">Confirm Password:</p>
+                <input class="inputField" type="password" %= form.password_field :password_confirmation %>
                 <p class="fieldTitle">School Name:</p>
-                <input class="schoolNameField" required %= form.text_field :schoolName %>
+                <input class="schoolNameField" type="text" %= form.text_field :schoolName %>
                 <br><br>
-                <input class="submitButton" value="Sign-Up" %= form.submit %>
+                <input class="submitButton" type="submit" value="Sign-Up" %= form.submit %>
                 &nbsp; &nbsp;
                 <%= link_to 'Login Page', login_loginPage_path, :class=> "otherButton" %>
             </form>
@@ -56,8 +58,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2019 Team Two<br>
-        ITSC 3155 Class Project</p>
+    
 </footer>
 
 </body>
