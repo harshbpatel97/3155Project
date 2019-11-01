@@ -6,9 +6,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Class Grade Calculator</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
-    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <link rel="icon" type="image/x-icon" href="https://my.uncc.edu/sites/all/themes/custom/my_unc_charlotte/favicon.ico"/>
 </head>
 
 <body>
@@ -23,25 +22,17 @@
             Please sign-up to use the calculator. If you already have an account, click the login page button.
         </p>
         <div class="formDiv">
-            <form id="studentInfo" name="studentInfo" action="javascript: passwordCheck();">
-                <p class="fieldTitle">Student Name:</p>
-                <input class="inputField" type="text" name="studentNameInput" required>
+            <form class="studentInfo" name="studentInfo" action="#">
                 <p class="fieldTitle">Email:</p>
                 <input class="inputField" type="email" name="emailInput" required>
                 <p class="fieldTitle">Password:</p>
-                <input class="inputField" type="password" name="passwordInput" required>
-                <p class="fieldTitle">Confirm Password:</p>
-                <input class="inputField" type="password" name="passwordInputConfirm" required>
-                <p class="fieldTitle">School Name:</p>
-                <input class="schoolNameField" type="text" name="schoolNameInput" required>
+                <input class="inputField" type="password" name="passwordInput" minlength="8" required>
                 <br><br>
-                <input class="submitButton" type="submit" value="Sign-Up">
-                &nbsp; &nbsp;
-                <a class="otherButton" href="webpages/loginPage.html">Login Page</a>
+                <input class="submitButton" type="submit" value="Login">
             </form>
         </div>
         <div>
-            <img id="studyingPicture" src="images/studying.jpg" alt="Studying Picture">
+            <img id="studyingPicture" src="https://img.freepik.com/free-photo/education-concept-student-studying-brainstorming-campus-concept-close-up-students-discussing-their-subject-books-textbooks-selective-focus_1418-627.jpg?size=626&ext=jpg" alt="Studying Picture" width="400px">
         </div>
     </div>
 </main>

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Class Grade Calculator</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-    <link rel="icon" type="image/x-icon" href="https://my.uncc.edu/sites/all/themes/custom/my_unc_charlotte/favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+    <script src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -22,20 +23,21 @@
             Please sign-up to use the calculator. If you already have an account, click the login page button.
         </p>
         <div class="formDiv">
-            <form id="studentInfo" name="studentInfo">
+            <form id="studentInfo" name="studentInfo" action="javascript: passwordCheck();">
                 <p class="fieldTitle">Student Name:</p>
                 <input class="inputField" type="text" name="studentNameInput" required>
                 <p class="fieldTitle">Email:</p>
                 <input class="inputField" type="email" name="emailInput" required>
                 <p class="fieldTitle">Password:</p>
                 <input class="inputField" type="password" name="passwordInput" required>
+                <p class="fieldTitle">Confirm Password:</p>
+                <input class="inputField" type="password" name="passwordInputConfirm" required>
                 <p class="fieldTitle">School Name:</p>
                 <input class="schoolNameField" type="text" name="schoolNameInput" required>
                 <br><br>
                 <input class="submitButton" type="submit" value="Sign-Up">
                 &nbsp; &nbsp;
                 <a class="otherButton" href="webpages/loginPage.html">Login Page</a>
-                <%= link_to 'Login', controller: 'login' %>
             </form>
         </div>
         <div>
@@ -45,8 +47,6 @@
 </main>
 
 <footer>
-    <p>&copy; 2019 Team Two<br>
-        ITSC 3155 Class Project</p>
 </footer>
 
 </body>
