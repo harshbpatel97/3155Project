@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- HTML file for Homepage of ITIS 3135 Project -->
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 
 <html lang="en">
 <head>
@@ -14,7 +27,6 @@
 <header>
 
 </header>
-
 <main>
     <div class="content">
         <h1 class="titleText">Class Grade Calculator</h1>
@@ -24,15 +36,15 @@
         <div class="formDiv">
             <form id="studentInfo" name="studentInfo">
                 <p class="fieldTitle">Student Name:</p>
-                <input class="inputField" type="text" name="studentNameInput" required>
+                <input class="inputField" required %= form.text_field :studentName %>
                 <p class="fieldTitle">Email:</p>
-                <input class="inputField" type="email" name="emailInput" required>
+                <input class="inputField" required %= form.text_field :email %>
                 <p class="fieldTitle">Password:</p>
-                <input class="inputField" type="password" name="passwordInput" required>
+                <input class="inputField" required %= form.password_field :password %>
                 <p class="fieldTitle">School Name:</p>
-                <input class="schoolNameField" type="text" name="schoolNameInput" required>
+                <input class="schoolNameField" required %= form.text_field :schoolName %>
                 <br><br>
-                <input class="submitButton" type="submit" value="Sign-Up">
+                <input class="submitButton" value="Sign-Up" %= form.submit %>
                 &nbsp; &nbsp;
                 <%= link_to 'Login Page', login_loginPage_path, :class=> "otherButton" %>
             </form>
@@ -50,3 +62,5 @@
 
 </body>
 </html>
+
+<% end %>

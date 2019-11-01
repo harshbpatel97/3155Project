@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   get 'calculator/gradeCalculator'
   get 'login/loginPage'
   get 'welcome/index'
