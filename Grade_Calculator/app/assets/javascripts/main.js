@@ -8,27 +8,27 @@ var assignment1Result = assignment2Result = assignment3Result = assignment4Resul
 // make sure vars are valid
 function validate() {
     // get the input
-    grade1Input = document.forms["studentInfo"]["grade1"].value;
-    grade2Input = document.forms["studentInfo"]["grade2"].value;
-    grade3Input = document.forms["studentInfo"]["grade3"].value;
-    grade4Input = document.forms["studentInfo"]["grade4"].value;
-    grade5Input = document.forms["studentInfo"]["grade5"].value;
-    grade6Input = document.forms["studentInfo"]["grade6"].value;
-    grade7Input = document.forms["studentInfo"]["grade7"].value;
-    grade8Input = document.forms["studentInfo"]["grade8"].value;
-    grade9Input = document.forms["studentInfo"]["grade9"].value;
-    grade10Input = document.forms["studentInfo"]["grade10"].value;
+    grade1Input = document.forms["gradeInfo"]["grade1"].value;
+    grade2Input = document.forms["gradeInfo"]["grade2"].value;
+    grade3Input = document.forms["gradeInfo"]["grade3"].value;
+    grade4Input = document.forms["gradeInfo"]["grade4"].value;
+    grade5Input = document.forms["gradeInfo"]["grade5"].value;
+    grade6Input = document.forms["gradeInfo"]["grade6"].value;
+    grade7Input = document.forms["gradeInfo"]["grade7"].value;
+    grade8Input = document.forms["gradeInfo"]["grade8"].value;
+    grade9Input = document.forms["gradeInfo"]["grade9"].value;
+    grade10Input = document.forms["gradeInfo"]["grade10"].value;
 
-    weight1Input = document.forms["studentInfo"]["weight1"].value;
-    weight2Input = document.forms["studentInfo"]["weight2"].value;
-    weight3Input = document.forms["studentInfo"]["weight3"].value;
-    weight4Input = document.forms["studentInfo"]["weight4"].value;
-    weight5Input = document.forms["studentInfo"]["weight5"].value;
-    weight6Input = document.forms["studentInfo"]["weight6"].value;
-    weight7Input = document.forms["studentInfo"]["weight7"].value;
-    weight8Input = document.forms["studentInfo"]["weight8"].value;
-    weight9Input = document.forms["studentInfo"]["weight9"].value;
-    weight10Input = document.forms["studentInfo"]["weight10"].value;
+    weight1Input = document.forms["gradeInfo"]["weight1"].value;
+    weight2Input = document.forms["gradeInfo"]["weight2"].value;
+    weight3Input = document.forms["gradeInfo"]["weight3"].value;
+    weight4Input = document.forms["gradeInfo"]["weight4"].value;
+    weight5Input = document.forms["gradeInfo"]["weight5"].value;
+    weight6Input = document.forms["gradeInfo"]["weight6"].value;
+    weight7Input = document.forms["gradeInfo"]["weight7"].value;
+    weight8Input = document.forms["gradeInfo"]["weight8"].value;
+    weight9Input = document.forms["gradeInfo"]["weight9"].value;
+    weight10Input = document.forms["gradeInfo"]["weight10"].value;
 
     // calculate using the calculate function
     calculate();
@@ -77,7 +77,15 @@ function calculate() {
         '<p>The combined weights of the assignments you entered is <strong>' + (weightTotal*100).toFixed(0) + '</strong> percent.</p>';
 
     document.getElementById("gradeResult").innerHTML = gradeResult;
-
 }
+
+// if the passwords do not match, alert the user
+function passwordCheck() {
+    if(document.forms["studentInfo"]["passwordInput"].value !== document.forms["studentInfo"]["passwordInputConfirm"].value) {
+        alert("Passwords do not match. Please reconfirm your password.");
+        return;
+    }
+}
+
 
 
