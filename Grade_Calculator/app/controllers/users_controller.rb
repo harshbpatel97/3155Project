@@ -10,11 +10,13 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    redirect_to login_loginPage_path
   end
 
   # GET /users/new
   def new
     @user = User.new
+    
   end
 
   # GET /users/1/edit
@@ -36,7 +38,7 @@ class UsersController < ApplicationController
       end
     end
   end
-
+  
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
