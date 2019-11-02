@@ -7,7 +7,6 @@
     <title>Class Grade Calculator</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     <link rel="icon" type="image/x-icon" href="https://my.uncc.edu/sites/all/themes/custom/my_unc_charlotte/favicon.ico"/>
-    <script src="../assets/javascripts/main.js"></script>
 </head>
 
 <body>
@@ -23,32 +22,30 @@
         <div class="formDiv">
             <%= form_with(model: @user, local: true, :id=> "studentInfo", :action=> "javascript: passwordCheck()") do |form| %>
                 <p class="fieldTitle">
-                <%= form.label("Student Name:") %>
+                <%= form.label("Student Name:") %> </p>
                 <%= form.text_field :studentName, :class=>"inputField" %>
-              </p>
+              
             
               <p class="fieldTitle">
-                <%= form.label("Email:") %>
+                <%= form.label("Email:") %> </p>
                 <%= form.text_field :email, :class=>"inputField" %>
-              </p>
+              
             
             
                <p class="fieldTitle">
-                <%= form.label("Password:") %>
+                <%= form.label("Password:") %> </p>
                 <%= form.password_field :password, :class=>"inputField" %>
-              </p>
+              
             
             
               <p class="fieldTitle">
-                <%= form.label("Confirm Password:") %>
+                <%= form.label("Confirm Password:") %> </p>
                 <%= form.password_field :password_confirmation, :class=>"inputField" %>
-              </p>
-            
+             
             
               <p class="fieldTitle">
-                <%= form.label("School Name:") %>
+                <%= form.label("School Name:") %> </p>
                 <%= form.text_field :schoolName, :class=>"schoolNameField"%>
-              </p>
               <br><br>
             
               <%= form.submit :class=>"submitButton", :value=>"Sign-Up" %>
