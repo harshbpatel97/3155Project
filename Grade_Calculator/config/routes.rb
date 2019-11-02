@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get 'login/loginPage'
   get 'welcome/index'
   get 'home_page/index'
+  get 'users/new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   resources :login
   
-  root 'welcome#index'
+  root 'users#new'
 end
