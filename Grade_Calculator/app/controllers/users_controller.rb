@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    redirect_to login_loginPage_path
+    redirect_to new_session_path
   end
 
   # GET /users/new

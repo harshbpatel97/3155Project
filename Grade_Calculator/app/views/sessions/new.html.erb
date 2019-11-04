@@ -19,17 +19,17 @@
     <div class="content">
         <h1 class="titleText">Class Grade Calculator</h1>
         <p id="intro">
-            Please sign-up to use the calculator. If you already have an account, click the login page button.
+            Enter your login credentials here!!!
         </p>
         <div class="formDiv">
-            <form class="studentInfo" name="studentInfo" action="#">
-                <p class="fieldTitle">Email:</p>
-                <input class="inputField" type="email" name="emailInput" required>
-                <p class="fieldTitle">Password:</p>
-                <input class="inputField" type="password" name="passwordInput" minlength="8" required>
-                <br><br>
-                <input class="submitButton" type="submit" value="Login">
-            </form>
+                <%= form_with :class=> "studentInfo", url: sessions_path do |form| %>
+                    <p><%= form.label("Email:", :class=> "fieldTitle") %> </p>
+                    <%= form.text_field :email, :class=> "inputField" %>
+                    <p class="fieldTitle"><%= form.label("Password:") %> </p>
+                    <%= form.password_field :password, :class=>"inputField" %>
+                    <br><br>
+                    <%= form.submit("Login", :class=>"submitButton") %>
+                <% end %>
         </div>
         <div>
             <img id="studyingPicture" src="https://img.freepik.com/free-photo/education-concept-student-studying-brainstorming-campus-concept-close-up-students-discussing-their-subject-books-textbooks-selective-focus_1418-627.jpg?size=626&ext=jpg" alt="Studying Picture" width="400px">
