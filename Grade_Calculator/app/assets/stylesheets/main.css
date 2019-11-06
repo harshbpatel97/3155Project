@@ -18,6 +18,7 @@
         font-family: "Source Sans Pro", helvetica, arial, sans-serif;
         font-size: 42px;
         margin-bottom: -10px;
+        padding-top: 50px;
     }
 }
 
@@ -192,9 +193,18 @@ body {
     margin-right: auto;
 }
 
-#grades {
-    display: inline-block;
-    width: 150px;
+@media screen and (min-width: 751px) {
+    #grades {
+        display: inline-block;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #grades {
+        display: block;
+        width: 150px;
+    }
 }
 
 #grades input {
@@ -210,9 +220,18 @@ body {
     margin-right: auto;
 }
 
-#weights {
-    display: inline-block;
-    width: 150px;
+@media screen and (min-width: 751px) {
+    #weights {
+        display: inline-block;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #weights {
+        display: block;
+        width: 150px;
+    }
 }
 
 #weights input {
@@ -233,11 +252,20 @@ body {
     font-size: 20px;
 }
 
-#buttonDiv {
-    margin-top: 13px;
-    text-align: center;
-    width: 65%;
-    float: left;
+@media screen and (min-width: 751px) {
+    #buttonDiv {
+        margin-top: 13px;
+        text-align: center;
+        width: 65%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #buttonDiv {
+        clear: both;
+        padding-top: 13px;
+    }
 }
 
 #resultsDiv {
