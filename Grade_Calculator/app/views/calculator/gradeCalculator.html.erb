@@ -19,12 +19,18 @@
 <main>
     <div class="content">
         <h1 class="titleText">Class Grade Calculator</h1>
+        <h1 class="topright">Hello! <%=User.find(session[:user_id]).studentName %>, <%=User.find(session[:user_id]).schoolName %> </h1>
         <p id="intro">
             Enter your current grades for the different types of assignments, along with the weights that each of the
             assignments have. Your calculated final grade will be on the right.
+            
         </p>
+        
         <form class="studentInfo" name="gradeInfo" action="javascript:validate();">
             <div class="calcDiv">
+                 
+                
+                
                 <div id="assignments">
                     <p class="columnTitle">Assignment</p>
                     <input type="text" name="assignment1" required placeholder="Tests">
