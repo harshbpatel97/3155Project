@@ -23,6 +23,15 @@
         </p>
         <div class="formDiv">
                 <%= form_with :class=> "studentInfo", url: sessions_path do |form| %>
+                    <% flash.each do |name, msg| %>
+                        <div id="error_explanation">
+                          <h2>Errors prohibited from logging in: </h2>
+                          <ul>
+                            <li>Either incorrect email/password</li>
+                            <li>Or user doesn't exists</li>
+                          </ul>
+                        </div>
+                    <% end %>
                     <p><%= form.label("Email:", :class=> "fieldTitle") %> </p>
                     <%= form.text_field :email, :class=> "inputField" %>
                     <p class="fieldTitle"><%= form.label("Password:") %> </p>

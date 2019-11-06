@@ -8,8 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to calculator_gradeCalculator_path, notice: "Logged in!"
     else
-      flash.now[:alert] = "Email or password is invalid"
-      render "new"
+      redirect_to new_session_path, danger: "Invalid email or password"
     end
   end  
   
@@ -17,4 +16,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url, notice: "Logged out!"
   end
+  
 end
