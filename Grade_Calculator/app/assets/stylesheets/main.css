@@ -59,7 +59,7 @@
 /* styling to center the content of the page */
 @media screen and (min-width: 1051px) {
     .content {
-        max-width: 960px;
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
         min-height: 100%;
@@ -208,7 +208,7 @@ body {
 }
 
 #grades input {
-    width: 55px;
+    width: 75px;
     font-size: 16px;
     border-style: solid;
     border-color: gray;
@@ -235,7 +235,7 @@ body {
 }
 
 #weights input {
-    width: 55px;
+    width: 75px;
     font-size: 16px;
     border-style: solid;
     border-color: gray;
