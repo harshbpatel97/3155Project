@@ -147,6 +147,27 @@ body {
     background-color: mediumseagreen;
 }
 
+/* styling for logout button */
+.logoutButton {
+    text-decoration: none;
+    background-color: yellowgreen;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4.35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80px;
+    -webkit-appearance: none;
+}
+
+/* styling for other button on hover */
+.logoutButton:hover {
+    background-color: mediumseagreen;
+}
+
 
 /* styling for input field titles  */
 .fieldTitle {

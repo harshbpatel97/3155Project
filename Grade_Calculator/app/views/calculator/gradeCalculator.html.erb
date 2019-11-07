@@ -20,7 +20,7 @@
     <div class="content">
         <h1 class="titleText">Class Grade Calculator</h1>
         <div class="topright">
-            <%= link_to 'Log Out', sessions_destroy_path, :class=> "otherButton" %>
+            <%= link_to 'Log Out', sessions_destroy_path, :class=> "logoutButton" %>
             <p>Hello, <%=User.find(session[:user_id]).studentName %>!!<br>
             <%=User.find(session[:user_id]).schoolName %></p>
         </div>
