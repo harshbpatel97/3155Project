@@ -3,30 +3,33 @@
 /* styling for Title Text on desktop */
 @media screen and (min-width: 1051px) {
     .titleText {
-        color: #006600;
+        color: #EEEEEE;
         font-family: "Source Sans Pro", helvetica, arial, sans-serif;
         font-size: 42px;
         margin-left: -30px;
         margin-bottom: -10px;
+        text-shadow: 2px 2px 4px #000000;
     }
 }
 
 /* styling title text smaller devices */
 @media screen and (max-width: 1050px) {
     .titleText {
-        color: #006600;
+        color: #EEEEEE;
         font-family: "Source Sans Pro", helvetica, arial, sans-serif;
         font-size: 42px;
         margin-bottom: -10px;
         padding-top: 50px;
+        text-shadow: 2px 2px 4px #000000;
     }
 }
 
 /* styling for intro paragraph */
 #intro {
     font-size: 24px;
-    color: #5a5d60;
+    color: #EEEEEE;
     margin-bottom: 5px;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 /* styling for subheadings on desktop */
@@ -83,26 +86,27 @@ body {
     font-family: "Source Sans Pro", helvetica, arial, sans-serif;
     background-color: white;
     overflow-x: hidden;
+    background-image: url(https://i.imgur.com/XdQWRV0.jpg);
+    background-size: cover;
+    color: white;
 }
 
 /* styling for the input boxes */
 .inputField {
     width: 250px;
     font-size: 16px;
-    border-style: solid;
-    border-color: gray;
-    border-width: 1px;
+    border-style: none;
     padding-left: 3px;
+    box-shadow: 2px 2px 4px #000000;
 }
 
 /* styling for the school name input box */
 .schoolNameField {
     width: 320px;
     font-size: 16px;
-    border-style: solid;
-    border-color: gray;
-    border-width: 1px;
+    border-style: none;
     padding-left: 3px;
+    box-shadow: 2px 2px 4px #000000;
 }
 
 /* styling for submit button */
@@ -147,7 +151,7 @@ body {
 /* styling for input field titles  */
 .fieldTitle {
     font-size: 18px;
-    color: #0D0D0D;
+    color: white;
     margin-bottom: 4px;
 }
 
@@ -184,7 +188,7 @@ body {
     width: 150px;
     font-size: 16px;
     border-style: solid;
-    border-color: gray;
+    border-color: dimgray;
     border-width: 1px;
     padding-left: 3px;
     margin-top: 12px;
@@ -211,7 +215,7 @@ body {
     width: 75px;
     font-size: 16px;
     border-style: solid;
-    border-color: gray;
+    border-color: dimgray;
     border-width: 1px;
     padding-left: 3px;
     margin-top: 12px;
@@ -238,7 +242,7 @@ body {
     width: 75px;
     font-size: 16px;
     border-style: solid;
-    border-color: gray;
+    border-color: dimgray;
     border-width: 1px;
     padding-left: 3px;
     margin-top: 12px;
@@ -248,8 +252,8 @@ body {
 }
 
 .columnTitle {
-    color: #006600;
     font-size: 20px;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 @media screen and (min-width: 751px) {
@@ -273,14 +277,13 @@ body {
 }
 
 #resultsTitle {
-    color: #006600;
+    color: #EEEEEE;
     font-size: 30px;
+    text-shadow: 1px 1px 2px #000000;
+    
 }
 
 #gradeResult {
     font-size: 20px;
 }
 
-#gradeResult strong {
-    color: #006600;
-}
