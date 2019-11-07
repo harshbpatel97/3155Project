@@ -23,7 +23,7 @@
             <%= form_with(model: @user, local: true, :id=> "studentInfo", :action=> "javascript: passwordCheck()") do |form| %>
                 
                 <% if user.errors.any? %>
-                <div id="error_explanation">
+                <div id="error_explanation_signup">
                   <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
                   
                   <ul>
@@ -68,7 +68,7 @@
 
         </div>
         <div>
-            <%= image_tag("studying.jpg", :id=>"studyingPicture", :alt=>"Studying Picture") %>
+            <%= image_tag("studying.jpg", :id=>"studyingPicture_signup", :alt=>"Studying Picture") %>
         </div>
     </div>
 </main>

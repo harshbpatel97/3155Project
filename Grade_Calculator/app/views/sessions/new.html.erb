@@ -24,7 +24,7 @@
         <div class="formDiv">
                 <%= form_with :class=> "studentInfo", url: sessions_path do |form| %>
                     <% flash.each do |name, msg| %>
-                        <div id="error_explanation">
+                        <div id="error_explanation_login">
                           <h2>Errors prohibited from logging in: </h2>
                           <ul>
                             <li>Either incorrect email/password</li>
@@ -43,7 +43,7 @@
                 <% end %>
         </div>
         <div>
-            <%= image_tag("studying.jpg", :id=>"studyingPicture", :alt=>"Studying Picture", :width=>"400px") %>
+            <%= image_tag("studying.jpg", :id=>"studyingPicture_login", :alt=>"Studying Picture", :width=>"400px") %>
         </div>
     </div>
 </main>
