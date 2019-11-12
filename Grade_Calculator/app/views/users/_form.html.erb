@@ -60,7 +60,7 @@
                 <%= form.label("School Name:") %> </p>
                 <%= form.text_field :schoolName, :class=>"schoolNameField"%>
               <br><br>
-              <%= form.submit :class=>"submitButton", :value=>"Sign-Up" %>
+              <%= form.submit :class=>"submitButton", :value=>"Sign-Up",  data: { disable_with: false }  %>
               &nbsp; &nbsp;
               <%= link_to 'Login', new_session_path, :class=> "otherButton" %>
           
