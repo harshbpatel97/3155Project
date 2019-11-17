@@ -19,7 +19,11 @@
 <main>
     <div class="content">
         <h1 class="titleText">Class Grade Calculator</h1>
-        
+        <div class="topright">
+            <%= link_to 'Log Out', sessions_destroy_path, :class=> "otherButton" %>
+            <p>Hello, <%= current_user.studentName%>!!<br>
+            <%= current_user.schoolName %></p>
+        </div>
         <p id="intro">
             Enter your current grades for the different types of assignments, along with the weights that each of the
             assignments have. Your calculated final grade will be on the right.
