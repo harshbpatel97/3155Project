@@ -1,49 +1,82 @@
-<%= form_for([@user, User.find(session[:user_id]).grades.build]) do |form| %>
-  
-  <div id="assignments">
-              <p>Assignment</p>
-                    <%= form.text_field :assignment1%>
-                    <%= form.text_field :assignment2%>
-                    <%= form.text_field :assignment3%>
-                    <%= form.text_field :assignment4%>
-                    <%= form.text_field :assignment5%>
-                    <%= form.text_field :assignment6%>
-                    <%= form.text_field :assignment7%>
-                    <%= form.text_field :assignment8%>
-                    <%= form.text_field :assignment9%>
-                    <%= form.text_field :assignment10%>
-                </div>
-                <div id="grades">
-                    <p >Grade (%)</p>
-                    <%= form.text_field :gradeNum1%>
-                    <%= form.text_field :gradeNum2%>
-                    <%= form.text_field :gradeNum3%>
-                    <%= form.text_field :gradeNum4%>
-                    <%= form.text_field :gradeNum5%>
-                    <%= form.text_field :gradeNum6%>
-                    <%= form.text_field :gradeNum7%>
-                    <%= form.text_field :gradeNum8%>
-                    <%= form.text_field :gradeNum9%>
-                    <%= form.text_field :gradeNum10%>
-                    
+<!DOCTYPE html>
+<!-- HTML file for Homepage of ITIS 3135 Project -->
 
-                </div>
-                <div id="weights">
-                    <p>Weight (%)</p>
-                    <%= form.text_field :wieght1%>
-                    <%= form.text_field :weight2%>
-                    <%= form.text_field :weight3%>
-                    <%= form.text_field :weight4%>
-                    <%= form.text_field :weight5%>
-                    <%= form.text_field :weight6%>
-                    <%= form.text_field :weight7%>
-                    <%= form.text_field :weight8%>
-                    <%= form.text_field :weight9%>
-                    <%= form.text_field :weight10%>
-                    
-                </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Class Grade Calculator</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <link rel="icon" type="image/x-icon" href="https://my.uncc.edu/sites/all/themes/custom/my_unc_charlotte/favicon.ico"/>
+    <script src="../scripts/main.js"></script>
+</head>
+
+<body>
+<header>
+
+</header>
+
+<main>
+    <div class="content">
+        <h1 class="titleText">Class Grade Calculator</h1>
+        
+        <p id="intro">
+            Enter your current grades for the different types of assignments, along with the weights that each of the
+            assignments have. Your calculated final grade will be on the right.
+        </p>
+<div class="calcDiv">
+<%= form_for([@user, User.find(session[:user_id]).grades.build], :class=>"studentInfo", :name=>"gradeInfo") do |form| %>
   
-  <p>
-    <%= form.submit %>
-  </p>
+    <div id="assignments">
+      <p class="columnTitle">Assignment</p>
+          <%= form.text_field :assignment1%>
+          <%= form.text_field :assignment2%>
+          <%= form.text_field :assignment3%>
+          <%= form.text_field :assignment4%>
+          <%= form.text_field :assignment5%>
+          <%= form.text_field :assignment6%>
+          <%= form.text_field :assignment7%>
+          <%= form.text_field :assignment8%>
+          <%= form.text_field :assignment9%>
+          <%= form.text_field :assignment10%>
+    </div>
+    <div id="grades">
+      <p class="columnTitle">Grade (%)</p>
+          <%= form.text_field :gradeNum1%>
+          <%= form.text_field :gradeNum2%>
+          <%= form.text_field :gradeNum3%>
+          <%= form.text_field :gradeNum4%>
+          <%= form.text_field :gradeNum5%>
+          <%= form.text_field :gradeNum6%>
+          <%= form.text_field :gradeNum7%>
+          <%= form.text_field :gradeNum8%>
+          <%= form.text_field :gradeNum9%>
+          <%= form.text_field :gradeNum10%>
+    </div>
+    <div id="weights">
+      <p class="columnTitle">Weight (%)</p>
+        <%= form.text_field :wieght1%>
+        <%= form.text_field :weight2%>
+        <%= form.text_field :weight3%>
+        <%= form.text_field :weight4%>
+        <%= form.text_field :weight5%>
+        <%= form.text_field :weight6%>
+        <%= form.text_field :weight7%>
+        <%= form.text_field :weight8%>
+        <%= form.text_field :weight9%>
+        <%= form.text_field :weight10%>
+    </div>
+    <div id="buttonDiv">
+      <%= form.submit("Save", :class=>"submitButton") %>
+      &nbsp;or&nbsp;
+      <input type="reset" value="Clear" class="submitButton" onClick="window.location.reload();">
+      &nbsp;or&nbsp;
+      <input type="button" value="Calculate" class="submitButton" onClick="javascript: validate();">
+    </div>
+
 <% end %>
+</div>
+</main>
+
+</body>
+</html>
