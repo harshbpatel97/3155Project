@@ -5,39 +5,33 @@ var grade1Input = grade2Input = grade3Input = grade4Input = grade5Input = grade6
 var weight1Input = weight2Input = weight3Input = weight4Input = weight5Input = weight6Input = weight7Input = weight8Input = weight9Input = weight10Input = 0;
 var assignment1Result = assignment2Result = assignment3Result = assignment4Result = assignment5Result = assignment6Result = assignment7Result = assignment8Result = assignment9Result = assignment10Result = 0;
 
-// make sure vars are valid
+// make sure vars are valid, and calculate
 function validate() {
-    // get the input
-    grade1Input = document.forms["gradeInfo"]["grade1"].value;
-    grade2Input = document.forms["gradeInfo"]["grade2"].value;
-    grade3Input = document.forms["gradeInfo"]["grade3"].value;
-    grade4Input = document.forms["gradeInfo"]["grade4"].value;
-    grade5Input = document.forms["gradeInfo"]["grade5"].value;
-    grade6Input = document.forms["gradeInfo"]["grade6"].value;
-    grade7Input = document.forms["gradeInfo"]["grade7"].value;
-    grade8Input = document.forms["gradeInfo"]["grade8"].value;
-    grade9Input = document.forms["gradeInfo"]["grade9"].value;
-    grade10Input = document.forms["gradeInfo"]["grade10"].value;
+        
+    // get the values of all inputs    
+    var grade1Input = document.getElementById("gradeNum1").value;
+    var grade2Input = document.getElementById("gradeNum2").value;
+    var grade3Input = document.getElementById("gradeNum3").value;
+    var grade4Input = document.getElementById("gradeNum4").value;
+    var grade5Input = document.getElementById("gradeNum5").value;
+    var grade6Input = document.getElementById("gradeNum6").value;
+    var grade7Input = document.getElementById("gradeNum7").value;
+    var grade8Input = document.getElementById("gradeNum8").value;
+    var grade9Input = document.getElementById("gradeNum9").value;
+    var grade10Input = document.getElementById("gradeNum10").value;
 
-    weight1Input = document.forms["gradeInfo"]["weight1"].value;
-    weight2Input = document.forms["gradeInfo"]["weight2"].value;
-    weight3Input = document.forms["gradeInfo"]["weight3"].value;
-    weight4Input = document.forms["gradeInfo"]["weight4"].value;
-    weight5Input = document.forms["gradeInfo"]["weight5"].value;
-    weight6Input = document.forms["gradeInfo"]["weight6"].value;
-    weight7Input = document.forms["gradeInfo"]["weight7"].value;
-    weight8Input = document.forms["gradeInfo"]["weight8"].value;
-    weight9Input = document.forms["gradeInfo"]["weight9"].value;
-    weight10Input = document.forms["gradeInfo"]["weight10"].value;
-
-    // calculate using the calculate function
-    calculate();
-}
-
-
-// Calculate PSIA RESULT
-function calculate() {
-    // make the weights decimals
+    var weight1Input = document.getElementById("weight1").value;
+    var weight2Input = document.getElementById("weight2").value;
+    var weight3Input = document.getElementById("weight3").value;
+    var weight4Input = document.getElementById("weight4").value;
+    var weight5Input = document.getElementById("weight5").value;
+    var weight6Input = document.getElementById("weight6").value;
+    var weight7Input = document.getElementById("weight7").value;
+    var weight8Input = document.getElementById("weight8").value;
+    var weight9Input = document.getElementById("weight9").value;
+    var weight10Input = document.getElementById("weight10").value;
+    
+    // turn the weights into decimals
     weight1Input = weight1Input / 100;
     weight2Input = weight2Input / 100;
     weight3Input = weight3Input / 100;
@@ -61,6 +55,7 @@ function calculate() {
     assignment9Result = grade9Input * weight9Input;
     assignment10Result = grade10Input * weight10Input;
 
+    // calculate the weight total
     var weightTotal = weight1Input + weight2Input + weight3Input + weight4Input + weight5Input + weight6Input + weight7Input + weight8Input + weight9Input + weight10Input;
 
     // if the weight is equal to 1
@@ -71,21 +66,16 @@ function calculate() {
         // if the grade is not equal to one, divide by the current total weight
         var finalGrade = (assignment1Result + assignment2Result + assignment3Result + assignment4Result + assignment5Result + assignment6Result + assignment7Result + assignment8Result + assignment9Result + assignment10Result) / weightTotal;
     }
-
+    
     // OUTPUT the final grade and combined weight
-    gradeResult = '<p>Your calculated final grade is  <strong>' + finalGrade.toFixed(3) + '</strong></p>' +
+    var gradeResult = '<p>Your calculated final grade is  <strong>' + finalGrade.toFixed(3) + '</strong></p>' +
         '<p>The combined weights of the assignments you entered is <strong>' + (weightTotal*100).toFixed(0) + '</strong> percent.</p>';
 
     document.getElementById("gradeResult").innerHTML = gradeResult;
+    
 }
 
-// if the passwords do not match, alert the user
-function passwordCheck() {
-    if(document.forms["studentInfo"]["passwordInput"].value !== document.forms["studentInfo"]["passwordInputConfirm"].value) {
-        alert("Passwords do not match. Please reconfirm your password.");
-        return;
-    }
-}
+
 
 
 

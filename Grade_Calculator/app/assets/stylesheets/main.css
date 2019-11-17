@@ -204,8 +204,7 @@ body {
 
 .calcDiv {
     text-align: center;
-    width: 65%;
-    float: left;
+   
     margin-top: -10px;
 }
 
@@ -289,9 +288,7 @@ body {
 
 @media screen and (min-width: 751px) {
     #buttonDiv {
-        margin-top: 13px;
-        text-align: center;
-        width: 65%;
+        padding-top: 13px;
         float: left;
     }
 }
@@ -305,16 +302,22 @@ body {
 
 #resultsDiv {
     text-align: center;
+    display: inline-block;
 }
 
 #resultsTitle {
     color: #EEEEEE;
     font-size: 30px;
     text-shadow: 1px 1px 2px #000000;
-    
+    display: inline-block;
 }
 
 #gradeResult {
     font-size: 20px;
+}
+
+#leftSide {
+    float: left;
+    width: 55%;
 }
 

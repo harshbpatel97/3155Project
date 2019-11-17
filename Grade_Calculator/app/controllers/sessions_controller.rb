@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to calculator_gradeCalculator_path
     else
-      flash[:alert] = "Invalid email or password"
+      flash.now.alert = "Invalid email or password"
       render new_session_path
     end
   end  

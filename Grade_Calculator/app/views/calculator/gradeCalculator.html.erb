@@ -31,9 +31,10 @@
 <div class="calcDiv">
 <%= form_for([@user, User.find(session[:user_id]).grades.build], :class=>"studentInfo", :name=>"gradeInfo") do |form| %>
   
+  <div id="leftSide">
     <div id="assignments">
       <p class="columnTitle">Assignment</p>
-          <%= form.text_field :assignment1%>
+          <%= form.text_field :assignment1, :placeholder=>"Test 1"%>
           <%= form.text_field :assignment2%>
           <%= form.text_field :assignment3%>
           <%= form.text_field :assignment4%>
@@ -46,38 +47,42 @@
     </div>
     <div id="grades">
       <p class="columnTitle">Grade (%)</p>
-          <%= form.text_field :gradeNum1%>
-          <%= form.text_field :gradeNum2%>
-          <%= form.text_field :gradeNum3%>
-          <%= form.text_field :gradeNum4%>
-          <%= form.text_field :gradeNum5%>
-          <%= form.text_field :gradeNum6%>
-          <%= form.text_field :gradeNum7%>
-          <%= form.text_field :gradeNum8%>
-          <%= form.text_field :gradeNum9%>
-          <%= form.text_field :gradeNum10%>
+          <%= form.text_field :gradeNum1, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :placeholder=>"100", :id=>"gradeNum1"%>
+          <%= form.text_field :gradeNum2, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum2"%>
+          <%= form.text_field :gradeNum3, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum3"%>
+          <%= form.text_field :gradeNum4, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum4"%>
+          <%= form.text_field :gradeNum5, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum5"%>
+          <%= form.text_field :gradeNum6, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum6"%>
+          <%= form.text_field :gradeNum7, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum7"%>
+          <%= form.text_field :gradeNum8, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum8"%>
+          <%= form.text_field :gradeNum9, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum9"%>
+          <%= form.text_field :gradeNum10, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum10"%>
     </div>
     <div id="weights">
       <p class="columnTitle">Weight (%)</p>
-        <%= form.text_field :wieght1%>
-        <%= form.text_field :weight2%>
-        <%= form.text_field :weight3%>
-        <%= form.text_field :weight4%>
-        <%= form.text_field :weight5%>
-        <%= form.text_field :weight6%>
-        <%= form.text_field :weight7%>
-        <%= form.text_field :weight8%>
-        <%= form.text_field :weight9%>
-        <%= form.text_field :weight10%>
+        <%= form.text_field :wieght1, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :placeholder=>"40", :id=>"weight1"%>
+        <%= form.text_field :weight2, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight2"%>
+        <%= form.text_field :weight3, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight3"%>
+        <%= form.text_field :weight4, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight4"%>
+        <%= form.text_field :weight5, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight5"%>
+        <%= form.text_field :weight6, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight6"%>
+        <%= form.text_field :weight7, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight7"%>
+        <%= form.text_field :weight8, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight8"%>
+        <%= form.text_field :weight9, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight9"%>
+        <%= form.text_field :weight10, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight10"%>
     </div>
-    <div id="buttonDiv">
-      <%= form.submit("Save", :class=>"submitButton") %>
-      &nbsp;or&nbsp;
-      <input type="reset" value="Clear" class="submitButton" onClick="window.location.reload();">
-      &nbsp;or&nbsp;
-      <input type="button" value="Calculate" class="submitButton" onClick="javascript: validate();">
+      <div id="buttonDiv">
+        <%= form.submit("Save", :class=>"submitButton") %>
+        &nbsp;&nbsp;
+        <input type="reset" value="Clear" class="submitButton" onClick="window.location.reload();">
+        &nbsp;&nbsp;
+        <input type="button" value="Calculate" class="submitButton" onClick="javascript: validate();">
+      </div>
     </div>
-
+    <div id="resultsDiv rightSide">
+        <p id="resultsTitle">Results</p>
+        <div id="gradeResult"></div>
+    </div>
 <% end %>
 </div>
 </main>
