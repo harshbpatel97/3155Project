@@ -68,11 +68,12 @@ function validate() {
     }
     
     // OUTPUT the final grade and combined weight
-    var gradeResult = '<p>Your calculated final grade is  <strong>' + finalGrade.toFixed(3) + '</strong></p>' +
-        '<p>The combined weights of the assignments you entered is <strong>' + (weightTotal*100).toFixed(0) + '</strong> percent.</p>';
-
-    document.getElementById("gradeResult").innerHTML = gradeResult;
+   
+    var gradeResult = finalGrade.toFixed(3);
+    var combinedWeight = (weightTotal*100).toFixed(0);
     
+    document.getElementById("gradeResult").innerText = gradeResult;
+    document.getElementById("combinedWeight").innerText = combinedWeight;
 }
 
 

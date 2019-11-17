@@ -79,9 +79,11 @@
         <input type="button" value="Calculate" class="submitButton" onClick="javascript: validate();">
       </div>
     </div>
-    <div id="resultsDiv rightSide">
+     <div id="resultsDiv rightSide">
         <p id="resultsTitle">Results</p>
-        <div id="gradeResult"></div>
+        <p>Your calculated final grade is  <strong><%= form.label :result, :id=>"gradeResult" %></strong></p>
+       <p>The combined weights of the assignments you entered is <strong><%= form.label :weightAvg,:id=>"combinedWeight", :value=>"0" %></strong> percent.</p>
+        
     </div>
 <% end %>
 </div>

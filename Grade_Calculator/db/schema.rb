@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_16_220453) do
+ActiveRecord::Schema.define(version: 2019_11_17_084532) do
 
   create_table "grades", force: :cascade do |t|
     t.string "assignment1"
@@ -43,10 +43,11 @@ ActiveRecord::Schema.define(version: 2019_11_16_220453) do
     t.float "weight8"
     t.float "weight9"
     t.float "weight10"
-    t.float "result"
+    t.string "result"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "weightAvg"
     t.index ["user_id"], name: "index_grades_on_user_id"
   end
 
