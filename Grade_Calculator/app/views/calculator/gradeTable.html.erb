@@ -1,0 +1,52 @@
+<h1>Previous Entry</h1>
+<% User.find(session[:user_id]).grades.each do |grade| %>
+    <div id="leftSide">
+        <div id="assignments">
+          <p class="columnTitle">Assignment</p>
+              <%= grade.assignment1 %>
+              <%= grade.assignment2 %>
+              <%= grade.assignment3 %>
+              <%= grade.assignment4 %>
+              <%= grade.assignment5 %>
+              <%= grade.assignment6 %>
+              <%= grade.assignment7 %>
+              <%= grade.assignment8 %>
+              <%= grade.assignment9 %>
+              <%= grade.assignment10 %>
+        </div>
+        <div id="grades">
+          <p class="columnTitle">Grade (%)</p>
+              <%= grade.gradeNum1 %>
+              <%= grade.gradeNum2 %>
+              <%= grade.gradeNum3 %>
+              <%= grade.gradeNum4 %>
+              <%= grade.gradeNum5 %>
+              <%= grade.gradeNum6 %>
+              <%= grade.gradeNum7 %>
+              <%= grade.gradeNum8 %>
+              <%= grade.gradeNum9 %>
+              <%= grade.gradeNum10 %>
+        </div>
+        <div id="weights">
+          <p class="columnTitle">Weight (%)</p>
+            <%= grade.wieght1 %>
+            <%= grade.weight2 %>
+            <%= grade.weight3 %>
+            <%= grade.weight4 %>
+            <%= grade.weight5 %>
+            <%= grade.weight6 %>
+            <%= grade.weight7 %>
+            <%= grade.weight8 %>
+            <%= grade.weight9 %>
+            <%= grade.weight10 %>
+        </div>
+        <div id="weights">
+            <p class="columnTitle">Result</p>
+            <%= grade.result %>
+        </div>
+        <div id="weights">
+            <p class="columnTitle">Weight Avg</p>
+            <%= grade.weightAvg %>
+        </div>
+    </div>
+<% end %>

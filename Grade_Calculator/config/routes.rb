@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   
   
   get 'calculator/gradeCalculator'
+  get 'calculator/gradeTable'
   get 'login/loginPage'
   get 'welcome/index'
   get 'home_page/index'
