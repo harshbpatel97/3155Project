@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_223659) do
+ActiveRecord::Schema.define(version: 2019_11_20_224103) do
 
   create_table "grades", force: :cascade do |t|
     t.string "assignment1"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2019_11_20_223659) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "weightAvg"
     t.index ["user_id"], name: "index_grades_on_user_id"
   end
 
