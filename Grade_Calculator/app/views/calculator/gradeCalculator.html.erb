@@ -28,6 +28,9 @@
             Enter your current grades for the different types of assignments, along with the weights that each of the
             assignments have. Your calculated final grade will be on the right.
         </p>
+        <% if flash.any? %>
+        <script>alert("Grades saved successfully to database!")</script>
+        <% end %>
 <div class="calcDiv">
 <%= form_for([@user, User.find(session[:user_id]).grades.build], :class=>"studentInfo", :name=>"gradeInfo") do |form| %>
   

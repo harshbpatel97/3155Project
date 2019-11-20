@@ -1,7 +1,11 @@
 class GradesController < ApplicationController
     def create
         @user = User.find(session[:user_id])
+        #grade = @user.grades.create(grade_params)
         @grade= @user.grades.first_or_create(grade_params).update(grade_params)
+        flash[:notice] = 'Successfully checked in'
+        redirect_to calculator_gradeCalculator_path
+        
     end
     private
     
