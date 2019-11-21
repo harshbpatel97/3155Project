@@ -50,16 +50,16 @@
     </div>
     <div id="grades">
       <p class="columnTitle">Grade (%)</p>
-          <%= form.text_field :gradeNum1, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :placeholder=>"100", :id=>"gradeNum1"%>
-          <%= form.text_field :gradeNum2, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum2"%>
-          <%= form.text_field :gradeNum3, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum3"%>
-          <%= form.text_field :gradeNum4, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum4"%>
-          <%= form.text_field :gradeNum5, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum5"%>
-          <%= form.text_field :gradeNum6, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum6"%>
-          <%= form.text_field :gradeNum7, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum7"%>
-          <%= form.text_field :gradeNum8, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum8"%>
-          <%= form.text_field :gradeNum9, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum9"%>
-          <%= form.text_field :gradeNum10, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"gradeNum10"%>
+          <%= form.text_field :gradeNum1, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :placeholder=>"100", :id=>"gradeNum1"%>
+          <%= form.text_field :gradeNum2, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :id=>"gradeNum2"%>
+          <%= form.text_field :gradeNum3, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :id=>"gradeNum3"%>
+          <%= form.text_field :gradeNum4, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :id=>"gradeNum4"%>
+          <%= form.text_field :gradeNum5, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :id=>"gradeNum5"%>
+          <%= form.text_field :gradeNum6, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :id=>"gradeNum6"%>
+          <%= form.text_field :gradeNum7, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :id=>"gradeNum7"%>
+          <%= form.text_field :gradeNum8, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :id=>"gradeNum8"%>
+          <%= form.text_field :gradeNum9, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :id=>"gradeNum9"%>
+          <%= form.text_field :gradeNum10, :type=>"number", :min=>"0", :max=>"120", :step=>"any", :id=>"gradeNum10"%>
     </div>
     <div id="weights">
       <p class="columnTitle">Weight (%)</p>
@@ -80,6 +80,7 @@
         <input type="reset" value="Clear" class="submitButton" onClick="window.location.reload();">
         &nbsp;&nbsp;
         <input type="button" value="Calculate" class="submitButton" onClick="javascript: validate();">
+        &nbsp;&nbsp;
         <%= link_to 'Show Previous Log', calculator_gradeTable_path, :class=>"submitButton" %>
       </div>
     </div>

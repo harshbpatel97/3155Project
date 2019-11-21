@@ -127,6 +127,11 @@ body {
     background-color: mediumseagreen;
 }
 
+a.submitButton {
+    padding-top: 4.25px;
+    padding-bottom: 4.25px;
+}
+
 /* styling for submit button */
 .otherButton {
     text-decoration: none;
