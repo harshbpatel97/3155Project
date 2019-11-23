@@ -87,7 +87,9 @@
      <div id="resultsDiv rightSide">
         <p id="resultsTitle">Results</p>
         <p>Your calculated final grade is  <strong><%= form.label :result, :id=>"gradeResult" %></strong></p>
+        <%= hidden_field(:grade, :result, :id=>"hidden_result") %>
        <p>The combined weights of the assignments you entered is <strong><%= form.label :weightAvg,:id=>"combinedWeight", :value=>"0" %></strong> percent.</p>
+       <%= hidden_field(:grade, :weightAvg, :id=>"hidden_weightAvg") %>
         
     </div>
 <% end %>

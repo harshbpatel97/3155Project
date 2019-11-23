@@ -1,52 +1,81 @@
-<h1>Previous Entry</h1>
-<% User.find(session[:user_id]).grades.each do |grade| %>
-    <div id="leftSide">
-        <div id="assignments">
-          <p class="columnTitle">Assignment</p>
-              <%= grade.assignment1 %>
-              <%= grade.assignment2 %>
-              <%= grade.assignment3 %>
-              <%= grade.assignment4 %>
-              <%= grade.assignment5 %>
-              <%= grade.assignment6 %>
-              <%= grade.assignment7 %>
-              <%= grade.assignment8 %>
-              <%= grade.assignment9 %>
-              <%= grade.assignment10 %>
+<!DOCTYPE html>
+<!-- HTML file for Homepage of ITIS 3135 Project -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Class Grade Calculator</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <link rel="icon" type="image/x-icon" href="https://my.uncc.edu/sites/all/themes/custom/my_unc_charlotte/favicon.ico"/>
+    <script src="../scripts/main.js"></script>
+</head>
+<body>
+<header>
+
+</header>
+
+<main>
+    <div class="content">
+        <h1 class="titleText">Previous Log</h1>
+        <div class="topright">
+            <%= link_to 'Log Out', sessions_destroy_path, :class=> "otherButton" %>
+            <p>Hello, <%= current_user.studentName%>!!<br>
+            <%= current_user.schoolName %></p>
         </div>
-        <div id="grades">
-          <p class="columnTitle">Grade (%)</p>
-              <%= grade.gradeNum1 %>
-              <%= grade.gradeNum2 %>
-              <%= grade.gradeNum3 %>
-              <%= grade.gradeNum4 %>
-              <%= grade.gradeNum5 %>
-              <%= grade.gradeNum6 %>
-              <%= grade.gradeNum7 %>
-              <%= grade.gradeNum8 %>
-              <%= grade.gradeNum9 %>
-              <%= grade.gradeNum10 %>
+        <% User.find(session[:user_id]).grades.each do |grade| %>
+        <div id="leftSide">
+            <div id="assignments">
+              <p class="columnTitle">Assignment</p>
+                  <%= grade.assignment1 %>
+                  <%= grade.assignment2 %>
+                  <%= grade.assignment3 %>
+                  <%= grade.assignment4 %>
+                  <%= grade.assignment5 %>
+                  <%= grade.assignment6 %>
+                  <%= grade.assignment7 %>
+                  <%= grade.assignment8 %>
+                  <%= grade.assignment9 %>
+                  <%= grade.assignment10 %>
+            </div>
+            <div id="grades">
+              <p class="columnTitle">Grade (%)</p>
+                  <%= grade.gradeNum1 %>
+                  <%= grade.gradeNum2 %>
+                  <%= grade.gradeNum3 %>
+                  <%= grade.gradeNum4 %>
+                  <%= grade.gradeNum5 %>
+                  <%= grade.gradeNum6 %>
+                  <%= grade.gradeNum7 %>
+                  <%= grade.gradeNum8 %>
+                  <%= grade.gradeNum9 %>
+                  <%= grade.gradeNum10 %>
+            </div>
+            <div id="weights">
+              <p class="columnTitle">Weight (%)</p>
+                <%= grade.wieght1 %>
+                <%= grade.weight2 %>
+                <%= grade.weight3 %>
+                <%= grade.weight4 %>
+                <%= grade.weight5 %>
+                <%= grade.weight6 %>
+                <%= grade.weight7 %>
+                <%= grade.weight8 %>
+                <%= grade.weight9 %>
+                <%= grade.weight10 %>
+            </div>
+            <div id="weights">
+                <p class="columnTitle">Result</p>
+                <%= grade.result %>
+            </div>
+            <div id="weights">
+                <p class="columnTitle">Weight Avg</p>
+                <%= grade.weightAvg %>
+            </div>
         </div>
-        <div id="weights">
-          <p class="columnTitle">Weight (%)</p>
-            <%= grade.wieght1 %>
-            <%= grade.weight2 %>
-            <%= grade.weight3 %>
-            <%= grade.weight4 %>
-            <%= grade.weight5 %>
-            <%= grade.weight6 %>
-            <%= grade.weight7 %>
-            <%= grade.weight8 %>
-            <%= grade.weight9 %>
-            <%= grade.weight10 %>
-        </div>
-        <div id="weights">
-            <p class="columnTitle">Result</p>
-            <%= grade.result %>
-        </div>
-        <div id="weights">
-            <p class="columnTitle">Weight Avg</p>
-            <%= grade.weightAvg %>
-        </div>
+    <% end %>
     </div>
-<% end %>
+  <%= link_to 'Back', calculator_gradeCalculator_path, :class=>"submitButton" %>
+</main>
+</body>
+</html>

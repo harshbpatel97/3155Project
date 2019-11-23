@@ -74,6 +74,8 @@ function validate() {
     
     document.getElementById("gradeResult").innerText = gradeResult;
     document.getElementById("combinedWeight").innerText = combinedWeight;
+    document.getElementById("hidden_result").value = gradeResult;
+    document.getElementById("hidden_weightAvg").value = combinedWeight;
 }
 
 
