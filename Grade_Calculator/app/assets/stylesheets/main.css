@@ -127,32 +127,6 @@ body {
     background-color: mediumseagreen;
 }
 
-a.submitButton {
-    padding-top: 4.25px;
-    padding-bottom: 4.25px;
-}
-
-/* styling for submit button */
-.otherButton {
-    text-decoration: none;
-    background-color: #006600;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    padding-top: 4.15px;
-    padding-bottom: 4.55px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 80px;
-    -webkit-appearance: none;
-}
-
-/* styling for other button on hover */
-.otherButton:hover {
-    background-color: mediumseagreen;
-}
-
 /* styling for logout button */
 .logoutButton {
     text-decoration: none;
@@ -326,4 +300,89 @@ a.submitButton {
     float: left;
     width: 55%;
 }
+
+#leftSideTable {
+    float: left;
+    width: 100%;
+    padding-top: 30px;
+}
+
+@-moz-document url-prefix() {
+    a.showLogButton {
+        background-color: #006600;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        padding-top: 5.5px;
+        padding-bottom: 4.18px;
+        padding-left: 4px;
+        padding-right: 4px;
+        width: 80px;
+        text-decoration: none;
+        -webkit-appearance: none;
+    }
+}
+
+.showLogButton {
+    background-color: #006600;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4.20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 80px;
+    text-decoration: none;
+    -webkit-appearance: none;
+}
+
+/* styling for submit button on hover */
+.showLogButton:hover {
+    background-color: mediumseagreen;
+}
+
+/* styling for buttons on FF */
+@-moz-document url-prefix() {
+    .otherButton {
+        background-color: #006600;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        padding-top: 5.4px !important;
+        padding-bottom: 4.2px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 80px;
+        text-decoration: none;
+        -webkit-appearance: none;
+    }
+}
+
+.otherButton {
+    background-color: #006600;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 4.5px;
+    padding-bottom: 4.75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80px;
+    text-decoration: none;
+    -webkit-appearance: none;
+}
+
+/* styling for submit button on hover */
+.otherButton:hover {
+    background-color: mediumseagreen;
+}
+
+
+
+
 
