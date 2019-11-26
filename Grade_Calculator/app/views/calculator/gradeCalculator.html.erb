@@ -75,11 +75,11 @@
         <%= form.text_field :weight10, :type=>"number", :min=>"0", :max=>"100", :step=>"any", :id=>"weight10"%>
     </div>
       <div id="buttonDiv">
-        <%= form.submit("Save", :class=>"submitButton") %>
+        <input type="button" value="Calculate" class="submitButton" onClick="javascript: validate();">
         &nbsp;&nbsp;
         <input type="reset" value="Clear" class="submitButton" onClick="window.location.reload();">
         &nbsp;&nbsp;
-        <input type="button" value="Calculate" class="submitButton" onClick="javascript: validate();">
+        <%= form.submit("Save", :class=>"submitButton") %>
         &nbsp;&nbsp;
         <%= link_to 'Show Previous Log', calculator_gradeTable_path, :class=>"showLogButton" %>
       </div>
