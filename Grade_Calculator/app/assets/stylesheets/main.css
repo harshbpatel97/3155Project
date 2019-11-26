@@ -382,6 +382,23 @@ body {
     background-color: mediumseagreen;
 }
 
+a.backButton {
+    background-color: #006600;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 4.5px;
+    padding-bottom: 4.75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80px;
+    text-decoration: none;
+    position: relative;
+    top: 30px;
+    -webkit-appearance: none;
+}
+
 
 
 
